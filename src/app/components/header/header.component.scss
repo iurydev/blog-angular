@@ -1,0 +1,18 @@
+@media (max-width: 1024px) {
+  .logo-angular {
+    height: 6rem;
+  }
+}
+@media (min-width: 1025px) {
+  .logo-angular {
+    height: 7rem;
+  }
+}
+
+.logo-angular {
+  transition: height 0.3s ease;
+}
+
+header {
+  margin-bottom: 1rem;
+}
