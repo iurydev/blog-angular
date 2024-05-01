@@ -8,4 +8,9 @@ export const routes: Routes = [
         (c) => c.TopPostsComponent
       ),
   },
+  {
+    path: 'post/:postId',
+    loadComponent: () =>
+      import('./components/post/post.component').then((c) => c.PostComponent),
+  },
 ];
