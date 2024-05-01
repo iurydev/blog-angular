@@ -12,4 +12,8 @@ export class PostsService {
   public getPosts(): Observable<any[]> {
     return this.httpClient.get<any[]>(`${environment.apiUrl}/posts`);
   }
+
+  public getPost(postId: string): Observable<any> {
+    return this.httpClient.get<any>(`${environment.apiUrl}/post/${postId}`)
+  }
 }
