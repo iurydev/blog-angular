@@ -1,8 +1,10 @@
 import { Observable } from 'rxjs';
-import { PostsService } from './../../services/posts.service';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { PostComponent } from '../post/post.component';
+import { PostsService } from './../../services/posts.service';
+import { Post } from '../../interfaces/post.interface';
 
 @Component({
   selector: 'app-top-posts',
@@ -12,6 +14,6 @@ import { PostComponent } from '../post/post.component';
   styleUrl: './top-posts.component.scss',
 })
 export class TopPostsComponent {
-  $posts: Observable<any[]> = this.postsService.getPosts();
+  $posts: Observable<Post[]> = this.postsService.getPosts();
   constructor(protected postsService: PostsService) {}
 }

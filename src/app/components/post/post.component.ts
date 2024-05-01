@@ -1,8 +1,10 @@
-import { PostsService } from './../../services/posts.service';
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
 import { lastValueFrom } from 'rxjs';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+
+import { PostsService } from './../../services/posts.service';
+import { Post } from '../../interfaces/post.interface';
 
 @Component({
   selector: 'app-post',
@@ -12,7 +14,7 @@ import { lastValueFrom } from 'rxjs';
   imports: [CommonModule, RouterModule],
 })
 export class PostComponent implements OnInit {
-  @Input() postData: any;
+  @Input() postData?: Post;
   constructor(
     private route: ActivatedRoute,
     private postsService: PostsService
