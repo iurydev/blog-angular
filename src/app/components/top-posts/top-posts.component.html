@@ -43,7 +43,7 @@
           <span
             class="block text-sm font-bold tracking-widest text-gray-500 uppercase"
           >
-            {{ post.autor }} . {{ post.data }}
+            {{ post.autor }} - {{ post.data | date : "dd/MM/yyyy" }}
           </span>
         </div>
       </ng-container>
